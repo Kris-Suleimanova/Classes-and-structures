@@ -96,31 +96,31 @@ class StudentsSpecifications {
     }
 }
 
-var students = [Pupil]()
+var pupil = [Pupil]()
 
 let pupil1 = Pupil(name: "Иванов", course: 3, average_grade: 5.00)
 let pupil2 = Pupil(name: "Петров", course: 4, average_grade: 3.85)
 let pupil3 = Pupil(name: "Ильина", course: 2, average_grade: 3.78)
 let pupil4 = Pupil(name: "Кадченко", course: 2, average_grade: 3.78)
 
-students.append(pupil1)
-students.append(pupil2)
-students.append(pupil3)
-students.append(pupil4)
+pupil.append(pupil1)
+pupil.append(pupil2)
+pupil.append(pupil3)
+pupil.append(pupil4)
 
 let h = StudentsSpecifications()
 
-var sort = h.sort(by: "name", students: students)
+var sort = h.sort(by: "name", students: pupil)
 for student in sort {
     print("Имя: \(student.name), Курс: \(student.course), Средний балл: \(student.average_grade)")
 }
 
-sort = h.sort(by: "course", students: students)
+sort = h.sort(by: "course", students: pupil)
 for student in sort {
     print("Имя: \(student.name), Курс: \(student.course), Средний балл: \(student.average_grade)")
 }
 
-sort = h.sort(by: "average_grade", students: students)
+sort = h.sort(by: "average_grade", students: pupil)
 for student in sort {
     print("Имя: \(student.name), Курс: \(student.course), Средний балл: \(student.average_grade)")
 }
